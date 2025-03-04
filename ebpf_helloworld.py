@@ -11,7 +11,7 @@
 from bcc import BPF
 
 #here starts ebpf code , it's written in c , bfp_trace_printk is a helper function used by epbf to interact with the system , and the entire ebpf program is defined as a string "program" in the python code , the c program is compiled tehn excuted by BCC 
-program = r """
+program = r"""
 
 int hello (void *ctx){ 
 bpf_trace_printk("Hello World!"); 
