@@ -35,6 +35,11 @@ b.trace_print()#this is the remaining python code to read the output of the trac
 #it opens the kernel tracing file: /sys/kernel/debug/tracing/trace_pipe
 # trace_print() function will loop indefinitely until u stop the program , use ctrl+c
 
+#if u are wondering how does the python script know where to read tracing output
+#it's simply bcuz bpf_trace_printk() helper func in the kernel always sends output to the same predefined pseudofile location /sys/kernel/debug/tracing/trace_pipe
+
+
+
 
 
 
